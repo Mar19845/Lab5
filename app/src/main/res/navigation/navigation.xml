@@ -9,5 +9,22 @@
         android:id="@+id/inicio"
         android:name="com.example.lab5.Inicio"
         android:label="fragment_inicio"
-        tools:layout="@layout/fragment_inicio" />
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicio_to_preguntas"
+            app:destination="@id/preguntas" />
+        <action
+            android:id="@+id/action_inicio_to_RPreguntas"
+            app:destination="@id/RPreguntas" />
+    </fragment>
+    <fragment
+        android:id="@+id/preguntas"
+        android:name="com.example.lab5.Preguntas"
+        android:label="fragment_preguntas"
+        tools:layout="@layout/fragment_preguntas" />
+    <fragment
+        android:id="@+id/RPreguntas"
+        android:name="com.example.lab5.RPreguntas"
+        android:label="fragment_rpreguntas"
+        tools:layout="@layout/fragment_rpreguntas" />
 </navigation>

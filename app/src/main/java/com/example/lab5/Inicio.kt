@@ -7,7 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.lab5.databinding.FragmentInicioBinding
+import androidx.navigation.findNavController
+import kotlinx.android.synthetic.main.fragment_inicio.view.*
+
 
 class Inicio : Fragment() {
         //return inflater.inflate(R.layout.fragment_inicio, container, false)
@@ -16,6 +20,12 @@ class Inicio : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentInicioBinding>(inflater,
             R.layout.fragment_inicio,container,false)
         return binding.root
+            binding.AgregarPregunntas.setOnClickListener { view : View ->
+                view.findNavController().navigate(R.id.action_inicio_to_preguntas)
+            }
+            binding.IniciarEncuesta.setOnClickListener { view : View ->
+                view.findNavController().navigate(R.id.action_inicio_to_RPreguntas)
+            }
     }
 }
 
