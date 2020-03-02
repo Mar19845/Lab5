@@ -6,6 +6,11 @@
     app:startDestination="@id/inicio">
 
     <fragment
+        android:id="@+id/preguntas"
+        android:name="com.example.lab5.Preguntas"
+        android:label="fragment_preguntas"
+        tools:layout="@layout/fragment_preguntas" />
+    <fragment
         android:id="@+id/inicio"
         android:name="com.example.lab5.Inicio"
         android:label="fragment_inicio"
@@ -14,17 +19,25 @@
             android:id="@+id/action_inicio_to_preguntas"
             app:destination="@id/preguntas" />
         <action
-            android:id="@+id/action_inicio_to_RPreguntas"
-            app:destination="@id/RPreguntas" />
+            android:id="@+id/action_inicio_to_encuesta"
+            app:destination="@id/encuesta" />
     </fragment>
     <fragment
-        android:id="@+id/preguntas"
-        android:name="com.example.lab5.Preguntas"
-        android:label="fragment_preguntas"
-        tools:layout="@layout/fragment_preguntas" />
+        android:id="@+id/encuesta"
+        android:name="com.example.lab5.Encuesta"
+        android:label="encuesta_fragment"
+        tools:layout="@layout/encuesta_fragment" >
+        <action
+            android:id="@+id/action_encuesta_to_resultado"
+            app:destination="@id/resultado" />
+    </fragment>
     <fragment
-        android:id="@+id/RPreguntas"
-        android:name="com.example.lab5.RPreguntas"
-        android:label="fragment_rpreguntas"
-        tools:layout="@layout/fragment_rpreguntas" />
+        android:id="@+id/resultado"
+        android:name="com.example.lab5.Resultado"
+        android:label="resultado_fragment"
+        tools:layout="@layout/resultado_fragment" >
+        <action
+            android:id="@+id/action_resultado_to_inicio"
+            app:destination="@id/inicio" />
+    </fragment>
 </navigation>

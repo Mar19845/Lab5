@@ -8,5 +8,11 @@
     <string name="escribe_aqui_tu_pregunta">Escribe aqui tu pregunta</string>
     <string name="responder_aqui">Responder aqui</string>
     <string name="siguiente">Siguiente</string>
+    <string name="agregar_pregunta">Agregar Pregunta</string>
+    <string name="aqui_deberia_de_ir_las_preguntas_de_la_lista">Aqui deberia de ir las preguntas de la lista</string>
+    <string name="resultados_de_la_ebcuesta">Resultados de la Ebcuesta</string>
+    <string name="nueva_encuesta">Nueva Encuesta</string>
+    <string name="promedio_rate">Promedio rate</string>
+    <string name="num_encuestas">Num encuestas</string>
 
 </resources>
