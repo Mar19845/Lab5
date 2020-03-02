@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<Layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,8 +7,8 @@
     tools:context=".Encuesta">
     <data>
         <variable
-            android:name="encuestaModel"
-            android:type="package com.example.lab5.EncuestaViewModel
+            name="Model"
+            type="package com.example.lab5.EncuestaViewModel">
 ">
         </variable>
     </data>
@@ -21,7 +21,7 @@
             android:layout_width="288dp"
             android:layout_height="35dp"
             android:layout_marginTop="108dp"
-            android:text="@{encuestaModel.pregunta"
+            android:text="@{Model.pregunta}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.585"
             app:layout_constraintStart_toStartOf="parent"
@@ -51,4 +51,4 @@
             app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</FrameLayout>
+</Layout>
