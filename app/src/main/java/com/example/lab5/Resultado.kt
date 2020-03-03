@@ -8,25 +8,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import kotlinx.android.synthetic.main.resultado_fragment.view.*
+
 
 
 class Resultado : Fragment() {
 
 
     private lateinit var viewModel: ResultadoViewModel
-    private lateinit var bindinResultado:ResultadoFragmentBinding
-
+    private lateinit var bindinResultado: ResultadoFragmentBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        bindinResultado = DataBindingUtil.inflate<ResultadoFragmentBinding>(
-            inflater,
-            R.layout.resultado_fragment,
-            container,
-            false
-        )
+        bindingResultado = DataBindingUtil.inflate(inflater, R.layout.resultado_fragment, container, false)
 
         viewModel = ViewModelProviders.of(activity!!).get(ResultadoViewModel::class.java)
         var ratings = viewModel.promedioRate.toString()

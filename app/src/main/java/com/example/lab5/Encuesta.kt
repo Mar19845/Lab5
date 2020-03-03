@@ -9,7 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import kotlinx.android.synthetic.main.encuesta_fragment.view.*
+import com.example.lab5.databinding.EncuestaFragmentBinding
+
+//import kotlinx.android.synthetic.main.encuesta_fragment.view.*
 
 
 class Encuesta : Fragment() {
@@ -28,7 +30,7 @@ class Encuesta : Fragment() {
 
         viewModel = ViewModelProviders.of(activity!!).get(EncuestaViewModel::class.java)
         viewModelR=ViewModelProviders.of(activity!!).get(ResultadoViewModel::class.java)
-        bindingEncuesta.encuestaModel=viewModel
+        bindingEncuesta.encuestaViewModel=viewModel
 
 
         bindingEncuesta.lifecycleOwner=viewLifecycleOwner
@@ -52,9 +54,9 @@ class Encuesta : Fragment() {
             }else if(viewModel.preguntasLista.size<=1){
                 rate=1
                 bindingEncuesta.ratingBar.visibility=View.VISIBLE
-                bindingEncuesta.editText2.visibility=View.GONE
+                bindingEncuesta.Respuestas.visibility=View.GONE
             }
-            viewModelR.establecerRespuesta(bindingEncuesta.editText2.text.toString())
+            viewModelR.establecerRespuesta(bindingEncuesta.Respuestas.text.toString())
             viewModel.selectPregunta()
             bindingEncuesta.Respuestas.setText("")
         }

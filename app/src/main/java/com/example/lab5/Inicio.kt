@@ -10,9 +10,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 
 
-/**
- * A simple [Fragment] subclass.
- */
 class Inicio : Fragment() {
     //private lateinit var binding: FragmentInicioBinding
 
@@ -34,6 +31,4 @@ class Inicio : Fragment() {
             view.findNavController().navigate(R.id.action_inicio_to_preguntas)
         }
     }
-
-
 }
