@@ -11,7 +11,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.lab5.databinding.EncuestaFragmentBinding
 
-//import kotlinx.android.synthetic.main.encuesta_fragment.view.*
+
 
 
 class Encuesta : Fragment() {

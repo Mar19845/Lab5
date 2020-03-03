@@ -8,14 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-
+import com.example.lab5.databinding.ResultadoFragmentBinding
 
 
 class Resultado : Fragment() {
 
 
     private lateinit var viewModel: ResultadoViewModel
-    private lateinit var bindinResultado: ResultadoFragmentBinding
+    private lateinit var bindingResultado : ResultadoFragmentBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,14 +27,14 @@ class Resultado : Fragment() {
         var ratings = viewModel.promedioRate.toString()
         var encuestas = viewModel.cantidadEncuestas.toString()
 
-        bindinResultado.Rate.setText("Promedio calificacioness: $ratings")
-        bindinResultado.NumEncuestas.setText("Cantidad de encuestas: $encuestas")
+        bindingResultado.Rate.setText("Promedio calificacioness: $ratings")
+        bindingResultado.NumEncuestas.setText("Cantidad de encuestas: $encuestas")
 
 
-        bindinResultado.Nuevo.setOnClickListener {
+        bindingResultado.Nuevo.setOnClickListener {
             view!!.findNavController().navigate(R.id.action_resultado_to_inicio)
         }
 
-            return bindinResultado.root
+            return bindingResultado.root
         }
 }
